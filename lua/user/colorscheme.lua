@@ -61,7 +61,6 @@ function M.config()
     }
   }
 
-  lvim.colorscheme = "gruvbox-baby"
 end
 
 return M
