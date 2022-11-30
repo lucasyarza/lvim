@@ -11,7 +11,11 @@ lvim.builtin.which_key.mappings["<Tab>"] = {
 -- Comments
 lvim.builtin.which_key.mappings['c'] = {
   name = "Comments",
-  l = { "<Plug>(comment_toggle_linewise_current)", "toggle-comment-line" },
+  l = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle" },
+}
+
+lvim.builtin.which_key.vmappings['c'] = { name = "Comments",
+  l = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle" },
 }
 
 local present_trouble, _ = pcall(require, 'trouble')
@@ -27,4 +31,12 @@ if present_trouble then
   }
 end
 
-
+local present_toggletasks, _ = pcall(require, 'toggletasks')
+if present_toggletasks then
+  lvim.builtin.which_key.mappings["r"] = {
+    name = "Run task",
+    r = {"<cmd>Telescope toggletasks spawn<cr>", "spawn tasks"},
+    s = {"<cmd>Telescope toggletasks select<cr>", "select running tasks"},
+    e = {"<cmd>Telescope toggletasks edit<cr>", "edit config files"},
+  }
+end

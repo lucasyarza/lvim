@@ -5,7 +5,6 @@ lvim.plugins = {
   "nvim-treesitter/playground",
   "mg979/vim-visual-multi",
   "rafcamlet/nvim-luapad",
-  "elixir-editors/vim-elixir",
   {
     "tzachar/cmp-tabnine",
     run = "./install.sh",
@@ -14,13 +13,25 @@ lvim.plugins = {
   },
   {
     "folke/trouble.nvim",
-      cmd = "TroubleToggle",
+    cmd = "TroubleToggle",
   },
   {
-      "s1n7ax/nvim-window-picker",
-      tag = "1.*",
-      config = function()
-        require("user.plugins.window-picker").config()
-      end,
+    "s1n7ax/nvim-window-picker",
+    tag = "1.*",
+    config = function()
+      require("user.plugins.window-picker").config()
+    end,
+  },
+  {
+    'lucasyarza/toggletasks.nvim',
+    branch = "var-line-info",
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'akinsho/toggleterm.nvim',
+    },
+  },
+  {
+    "luisiacc/gruvbox-baby",
+    branch = "main",
   }
 }

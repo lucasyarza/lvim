@@ -21,6 +21,8 @@ function M.config()
     },
     other_win_hl_color = "#e35e4f",
   })
+
+  M.keymap()
 end
 
 function M.keymap()

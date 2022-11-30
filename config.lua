@@ -20,4 +20,4 @@ reload "user.nvimtree"
 reload "user.treesitter"
 reload "user.icons"
 reload "user.whichkey"
-
+reload "user.plugins.toggletasks"
