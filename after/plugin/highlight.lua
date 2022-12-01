@@ -1,3 +1,10 @@
--- local util = require('user.colors.util')
--- util.modified_highlight('@function.call', {italic = true})
+local util = require('user.colors.util')
 
+local highlights = {
+  ['@function.call'] = {italic = true},
+  ['@keyword'] = {italic = true},
+}
+
+for hlgroup, hlcolors in pairs(highlights) do
+  util.modified_highlight(hlgroup, hlcolors)
+end
