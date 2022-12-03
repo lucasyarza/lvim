@@ -7,6 +7,30 @@ formatters.setup {
 -- linters.setup {
 --   { name = "credo" },
 -- }
+--
+local dap = require('dap')
+dap.adapters.mix_task = {
+  type = 'executable',
+  command = '/Users/ldeyarza/elixir-ls/release/debugger.sh',
+  args = {}
+}
+
+dap.configurations.elixir = {
+  {
+    type = "mix_task",
+    name = "mix test",
+    task = 'test',
+    taskArgs = {"--trace"},
+    request = "launch",
+    startApps = true, -- for Phoenix projects
+    projectDir = "${workspaceFolder}",
+    requireFiles = {
+      "test/**/test_helper.exs",
+      "test/**/*_test.exs"
+    }
+  },
+}
+
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -26,14 +50,7 @@ local mappings = {
   m = {
     name = "Elixir",
     i = { "<cmd>101TermExec cmd=\"mix dep.get\"<Cr>", "mix deps.get" },
-    -- f = { "<cmd>GoMod tidy<cr>", "Tidy" },
-    -- a = { "<cmd>GoTestAdd<Cr>", "Add Test" },
-    -- A = { "<cmd>GoTestsAll<Cr>", "Add All Tests" },
-    -- e = { "<cmd>GoTestsExp<Cr>", "Add Exported Tests" },
-    -- g = { "<cmd>GoGenerate<Cr>", "Go Generate" },
-    -- G = { "<cmd>GoGenerate %<Cr>", "Go Generate File" },
-    -- c = { "<cmd>GoCmt<Cr>", "Generate Comment" },
-    -- t = { "<cmd>lua require('dap-go').debug_test()<cr>", "Debug Test" },
+    t = { "<cmd>101TermExec cmd=\"mix test\"<cr>", "mix test" },
   },
 }
 

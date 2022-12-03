@@ -17,4 +17,5 @@ lvim.builtin.terminal.active = true
 
 table.insert(lvim.builtin.project.patterns, 'mix.exs')
 
+vim.g.python3_host_prog = os.getenv("PYTHON3_HOST_PROG")
 
