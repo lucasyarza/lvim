@@ -24,8 +24,7 @@ lvim.plugins = {
     end,
   },
   {
-    'lucasyarza/toggletasks.nvim',
-    branch = "var-line-info",
+    'jedrzejboczar/toggletasks.nvim',
     requires = {
       'nvim-lua/plenary.nvim',
       'akinsho/toggleterm.nvim',

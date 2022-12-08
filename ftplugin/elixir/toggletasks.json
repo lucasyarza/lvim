@@ -1,0 +1,14 @@
+{
+    "tasks": [
+        {
+            "name": "Test",
+            "cmd": "mix test",
+            "tags": ["test"]
+        },
+        {
+            "name": "Run current test",
+            "cmd": "mix test ${file}:${cursor_line}",
+            "tags": ["test"]
+        }
+    ]
+}
