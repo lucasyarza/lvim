@@ -4,8 +4,6 @@ lvim.lsp.installer.setup.ensure_installed = {
     "elixirls",
 }
 
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
-
 lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.diagnostics.float = {
   border = "rounded",
@@ -13,3 +11,5 @@ lvim.lsp.diagnostics.float = {
   source = 'always',
   prefix = ' ',
 }
+
+require "user.lsp.languages.python"

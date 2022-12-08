@@ -5,6 +5,7 @@ lvim.plugins = {
   "nvim-treesitter/playground",
   "mg979/vim-visual-multi",
   "rafcamlet/nvim-luapad",
+  "mfussenegger/nvim-dap-python",
   {
     "tzachar/cmp-tabnine",
     run = "./install.sh",
@@ -30,8 +31,4 @@ lvim.plugins = {
       'akinsho/toggleterm.nvim',
     },
   },
-  {
-    "luisiacc/gruvbox-baby",
-    branch = "main",
-  }
 }
