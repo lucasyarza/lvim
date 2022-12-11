@@ -34,9 +34,15 @@ lvim.plugins = {
     "ghillb/cybu.nvim",
     branch = "main", -- timely updates
     -- branch = "v1.x", -- won't receive breaking changes
-     requires = { "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim"},
-    config = function ()
+    requires = { "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim" },
+    config = function()
       require("user.plugins.cybu").config()
+    end
+  },
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {}
     end
   }
 }

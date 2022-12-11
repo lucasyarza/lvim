@@ -8,6 +8,10 @@ lvim.builtin.which_key.mappings["<Tab>"] = {
   "<cmd>Telescope buffers<cr>", "Find"
 }
 
+lvim.builtin.which_key.mappings["z"] = {
+  "<cmd>ZenMode<cr>", "ZenMode"
+}
+
 -- Comments
 lvim.builtin.which_key.mappings['c'] = {
   name = "Comments",
